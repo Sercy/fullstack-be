@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "fullstack-be": "apps/fullstack-be"
+  }
+}
