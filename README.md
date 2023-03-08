@@ -3,9 +3,10 @@
 # FullstackBe
 
 ## Starting up
-1. $ docker compose up -d
-2. $ npm start
-3. browse:
+1. $ npm i --legacy-peer-deps
+2. $ docker compose up -d
+3. $ npm start
+4. browse:
     - api: http://localhost:3333/api
     - swagger: http://localhost:3333/openapi
     - swagger.json: http://localhost:3333/openapi-json
