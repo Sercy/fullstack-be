@@ -27,6 +27,7 @@ async function bootstrap() {
   
   const globalPrefix = 'api';
   app.enableVersioning();
+  app.enableCors();
   app.setGlobalPrefix(globalPrefix);
 
   setupOpenApi(app);
