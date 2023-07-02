@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { DeleteResult, Repository, UpdateResult } from 'typeorm';
+import { DeleteResult, UpdateResult } from 'typeorm';
 import { CreateItemDto } from './dto/create-item.dto';
 import { Item } from './entities/item.entity';
 import { UpdateItemDto } from './dto/update-item.dto';
@@ -19,7 +18,7 @@ export class ItemsService {
   //   @InjectRepository(Item) private itemsRepository: Repository<Item>
   // ) { }
 
-  create(createItemDto: CreateItemDto): Promise<CreateItemDto & Item> {
+  create(createItemDto: CreateItemDto): Promise<Item> {
     return new Promise((res) => {
       const createdItem = { id: this.items.length + 1, ...createItemDto };
       this.items.push(createdItem);

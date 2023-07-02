@@ -1,17 +1,17 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiResponseProperty } from '@nestjs/swagger';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Item {
   @PrimaryGeneratedColumn()
-  @ApiProperty({ example: 1, description: 'id' })
+  @ApiResponseProperty({ example: 1 })
   id: number;
 
   @Column()
-  @ApiProperty({ example: 'John Doe', description: 'name' })
+  @ApiResponseProperty({ example: 'John Doe' })
   name: string;
 
   @Column()
-  @ApiProperty({ example: false, description: 'isProcessed' })
+  @ApiResponseProperty({ example: false })
   isProcessed?: boolean;
 }
